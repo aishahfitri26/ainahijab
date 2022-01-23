@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Home</title>
+<meta charset="UTF-8">
+<meta name="home" content="width=device-width, initial-scale=1, Aina Hijab,Collection">
+<link rel="stylesheet" type="text/css" href="design.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="footer.css" />
+<link rel="stylesheet" type="text/css" href="slide.css" />
+<link rel="stylesheet" type="text/css" href="photo.css" />
+</head>
+<style>
+.box {
+  float: left;
+  width: 50%;
+  padding: 50px;
+}
+
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+</style>
+<body>
+<div class="header">
+  <h1>AINA HIJAB</h1>
+  <p>Simple and Modesty</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="collection.html">Collection</a>
+  <a href="review.html">Customer Review</a>
+   <a href="contact.html">Contact Us</a>
+  <a href="#"class="right"><i class="fa fa-shopping-bag"></i></a>
+  <a href="login.html" class="right"><i class="fa fa-fw fa-user"></i></a>
+</div>
+
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+  <img src="img.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img2.jpg" style="width:100%">
+</div>
+
+<div class="mySlides fade">
+  <img src="img3.jpg" style="width:100%">
+</div>
+
+</div>
+<br>
+
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+
+<section style="padding-bottom:170px">
+<h2 align="center">Our Collection</h2>
+
+<div class="row">
+  <div class="column">
+    <div class="container">
+  <img src="pleatedshawl.jpg"class="image" style="width:100%,height:20%;">
+  <div class="middle">
+    <div class="text"><a href="#">Buy Now</a></div>
+  </div>
+  <center><p><span class>PLEATED SHAWL</span></p></center>
+</div>
+  </div>
+  <div class="column">
+    <div class="container">
+  <img src="bawalantikedut.jpg"class="image" style="width:105%">
+  <div class="middle">
+    <div class="text"><a href="#">Buy Now</a></div>
+  </div>
+  <center><p><span class>BAWAL ANTI KEDUT</span></p></center>
+</div>
+  </div>
+  <div class="column">
+    <div class="container">
+  <img src="bawalseri.jpg" class="image" style="width:106%">
+  <div class="middle">
+    <div class="text"><a href="#">Buy Now</a></div>
+  </div>
+  <center><p><span class>BAWAL SERI</span></p></center>
+</div>
+  </div>
+  <div class="column">
+    <div class="container">
+  <img src="satinsilkshawl.jpg" class="image" style="width:94%">
+  <div class="middle">
+    <div class="text"><a href="#">Buy Now</a></div>
+  </div>
+  <center><p><span class>SATIN SILK SHAWL</span></p></center>
+</div>
+</div>
+</div>
+</section>
+

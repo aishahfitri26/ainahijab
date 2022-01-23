@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Seri Cotton Square</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" type="text/css" href="design.css" />
+<link rel="stylesheet" type="text/css" href="slide.css" />
+<link rel="stylesheet" type="text/css" href="sericottonsquare.css" />
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="footer.css" />
+<link rel="stylesheet" type="text/css" href="whatsapp.css" />
+</head>
+<body>
+<div class="header">
+  <h1>AINA HIJAB</h1>
+  <p>Simple and Modesty</p>
+</div>
+
+<div class="navbar">
+  <a href="index.html">Home</a>
+  <a href="aboutus.html">About Us</a>
+  <a href="collection.html">Collection</a>
+  <a href="review.html">Customer Review</a>
+   <a href="contact.html">Contact Us</a>
+  <a href="#"class="right"><i class="fa fa-shopping-bag"></i></a>
+  <a href="#"class="right"><i class="fa fa-fw fa-user"></i></a>
+</div>
+
+
+<div class>
+<h2 align="center">
+SERI COTTON SQUARE
+</h2></div>
+<div class="column1" style="background-color:#ffffff;">
+ <!-- gallery pic -->
+    <div class="row">
+        <div class="column">
+            <img src="sericottonsquare1.jpg"
+                style="width:60%" onclick="gfg(this);">
+            <img src="sericottonsquare2.jpg"
+                style="width:60%" onclick="gfg(this);">
+            <img src="sericottonsquare3.jpg"
+                style="width:60%" onclick="gfg(this);">
+	    <img src="sericottonsquare4.jpg"
+                style="width:60%" onclick="gfg(this);">
+        </div>
+ 
+        <div class="column">
+            <span onclick=
+                "this.parentElement.style.display='none'">
+            </span>
+             
+            <img id="expand" style="width:380%;
+                height:89%; margin-top: 15px;">
+        </div>
+ </div>
+ </div>
+<div class="column2" style="background-color:#ffffff;">
+    <h3>Seri Cotton Square</h3>
+    <p>RM 9.00 (each)</p>
+<p>Shipping calculated at checkout</p>
+    <p>Material:Cotton Voile</p>
+    <p>Size:90 x 90 cm</p>
+<h3>Select Item</h3>
+
+<!--surround the select box with a "custom-select" DIV element. Remember to set the width:-->
+<div class="custom-select" style="width:150px;">
+  <select>
+    <option value="0">Select Color</option>
+    <option value="1">Thistle</option></il>
+    <option value="2">Periwinkle</option>
+    <option value="3">Lipstick</option>
+    <option value="4">Duty Rose</option>
+    <option value="5">Space</option>
+    <option value="6">Denim</option>
+    <option value="7">Icy</option>
+    <option value="8">Cloud</option>
+    <option value="9">Forest</option>
+    <option value="10">Dark Cyan</option>
+    <option value="11">Cyan</option>
+    <option value="12">Winter</option>
+    <option value="13">Matcha</option>
+    <option value="14">Green Smoke</option>
+    <option value="15">Olive</option>
+    <option value="16">Avocado</option>
+  </select>
+</div>
+<br>
+<div class="container" align="left">
+            <a href="cart.html"><button type="button" 
+                class="btn btn-default btn-sm">
+                <span class="glyphicon 
+                    glyphicon-shopping-cart">
+                </span>
+                <b> Add to Cart </b>
+            </button></a>
+        </p>
+    </div>
+<a href="checkout.html" target="_blank">
+<img src="checkoutimage.png" width="17%">
+  </div>
+</div>
+<center>
+<a href="collection.html"><img src="collectionimage.png">
+</center>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 2000); // Change image every 2 seconds
+}
+</script>
+<script>
+    function gfg(imgs) {
+        var expandImg = document.getElementById("expand");
+        var imgText = document.getElementById("geeks");
+        expandImg.src = imgs.src;
+        imgText.innerHTML = imgs.alt;
+        expandImg.parentElement.style.display = "block";
+    }
+</script>
+
+<script>
+var x, i, j, l, ll, selElmnt, a, b, c;
+/*look for any elements with the class "custom-select":*/
+x = document.getElementsByClassName("custom-select");
+l = x.length;
+for (i = 0; i < l; i++) {
+  selElmnt = x[i].getElementsByTagName("select")[0];
+  ll = selElmnt.length;
+  /*for each element, create a new DIV that will act as the selected item:*/
+  a = document.createElement("DIV");
+  a.setAttribute("class", "select-selected");
+  a.innerHTML = selElmnt.options[selElmnt.selectedIndex].innerHTML;
+  x[i].appendChild(a);
+  /*for each element, create a new DIV that will contain the option list:*/
+  b = document.createElement("DIV");
+  b.setAttribute("class", "select-items select-hide");
+  for (j = 1; j < ll; j++) {
+    /*for each option in the original select element,
+    create a new DIV that will act as an option item:*/
+    c = document.createElement("DIV");
+    c.innerHTML = selElmnt.options[j].innerHTML;
+    c.addEventListener("click", function(e) {
+        /*when an item is clicked, update the original select box,
+        and the selected item:*/
+        var y, i, k, s, h, sl, yl;
+        s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+        sl = s.length;
+        h = this.parentNode.previousSibling;
+        for (i = 0; i < sl; i++) {
+          if (s.options[i].innerHTML == this.innerHTML) {
+            s.selectedIndex = i;
+            h.innerHTML = this.innerHTML;
+            y = this.parentNode.getElementsByClassName("same-as-selected");
+            yl = y.length;
+            for (k = 0; k < yl; k++) {
+              y[k].removeAttribute("class");
+            }
+            this.setAttribute("class", "same-as-selected");
+            break;
+          }
+        }
+        h.click();
+    });
+    b.appendChild(c);
+  }
+  x[i].appendChild(b);
+  a.addEventListener("click", function(e) {
+      /*when the select box is clicked, close any other select boxes,
+      and open/close the current select box:*/
+      e.stopPropagation();
+      closeAllSelect(this);
+      this.nextSibling.classList.toggle("select-hide");
+      this.classList.toggle("select-arrow-active");
+    });
+}
+function closeAllSelect(elmnt) {
+  /*a function that will close all select boxes in the document,
+  except the current select box:*/
+  var x, y, i, xl, yl, arrNo = [];
+  x = document.getElementsByClassName("select-items");
+  y = document.getElementsByClassName("select-selected");
+  xl = x.length;
+  yl = y.length;
+  for (i = 0; i < yl; i++) {
+    if (elmnt == y[i]) {
+      arrNo.push(i)
+    } else {
+      y[i].classList.remove("select-arrow-active");
+    }
+  }
+  for (i = 0; i < xl; i++) {
+    if (arrNo.indexOf(i)) {
+      x[i].classList.add("select-hide");
+    }
+  }
+}
+/*if the user clicks anywhere outside the select box,
+then close all select boxes:*/
+document.addEventListener("click", closeAllSelect);
+</script>
+
+<a href="https://api.whatsapp.com/send?phone=60103841178&text=Hi%20there%3F%20We%20are%20here%20to%20help.%20Chat%20with%20us%20on%20WhatsApp%20for%20any%20questions%20and%20enquiry." class="float" target="_blank">
+<i class="fa fa-whatsapp my-float"></i>
+</a>
+
+
+<footer class="footer-distributed">
+
+			<div class="footer-left">
+          <img src="logo.jpg">
+				<h3>Aina<span>Hijab</span></h3>
+
+				<p class="footer-links">
+					<a href="index.html">Home</a>
+					|
+					<a href="aboutus.html">About</a>
+					|
+					<a href="contact.html">Contact</a>
+				</p>
+
+				<p class="footer-company-name">© 2022 Aina Hijab Sdn. Bhd.</p>
+			</div>
+
+			<div class="footer-center">
+				<div>
+					<i class="fa fa-map-marker"></i>
+					  <p><span>No. 18, Lorong Perda Utama 4, Bandar Baru Perda, 
+				14000 Bukit Mertajam, Pulau Pinang.</p>
+				</div>
+
+				<div>
+					<i class="fa fa-phone"></i>
+					<p>+04-502 2900</p>
+				</div>
+				<div>
+					<i class="fa fa-envelope"></i>
+					<p><a href="https://mail.google.com/mail/u/0/?ogbl#search/msyeyna01%40gmail.com" target="_blank">msyeyna01@gmail.com</a></p>
+				</div>
+			</div>
+			<div class="footer-right">
+				<p class="footer-company-about">
+					<span>About the company</span>
+					We provide various types of beautiful hijabs for you.</p>
+				<div class="footer-icons">
+					<a href="https://api.whatsapp.com/send?phone=60103841178&text=Hi%20there%3F%20We%20are%20here%20to%20help.%20Chat%20with%20us%20on%20WhatsApp%20for%20any%20questions%20and%20enquiry." target="_blank"><i class="fa fa-whatsapp"></i></a>
+					<a href="https://shopee.com.my/msyeyna?smtt=0.0.9" target="_blank"><i class="fa fa-shopping-cart"></i></a>
+					<a href="https://www.instagram.com/ainahijab.hq/?utm_medium=copy_link" target="_blank"><i class="fa fa-instagram"></i></a>
+				</div>
+			</div>
+		</footer>
+</body>
+</html>

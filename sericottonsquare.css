@@ -1,0 +1,145 @@
+<style>
+
+* {
+  box-sizing: border-box;
+}
+
+/* column pic */
+    .column {
+        float: left;
+        width: 20%;
+        padding: 10px;
+    }
+   
+    /* Style the images of gallery */
+    .column img {
+        opacity: 0.6;
+        cursor: pointer;
+        padding: 5px;
+    }
+     
+    .column img:hover {
+        opacity: 1;
+        transform: scale(1.1);
+        transition: 0.5s;
+    }
+     
+    .column img:active {
+        opacity: 1;
+    }
+   
+    * {
+        box-sizing: border-box;
+    }
+/* Expanding image text */
+    #geeks {
+        position: absolute;
+        left: 200px;
+        padding-top: 100px;
+        font-size: 28px;
+        color: #EFECE9;
+    }
+     
+    #geeks:hover {
+        color: #ADE3BD;
+        cursor: wait;
+    }
+* {
+  box-sizing: border-box;
+}
+
+/* Create two equal columns that floats next to each other */
+.column1 {
+  float: left;
+  width: 60%;
+  paddi6g: 10px;
+  height: 600px; /* Should be removed. Only for demonstration */
+}
+.column2 {
+  float: left;
+  width: 40%;
+  padding: 10px;
+  height: 850px; /* Should be removed. Only for demonstration */
+}
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/*the container must be positioned relative:*/
+.custom-select {
+  position: relative;
+  font-family: Arial;
+}
+h2 {
+  color: #9b7339;
+}
+
+.custom-select select {
+  display: none; /*hide original SELECT element:*/
+}
+
+.select-selected {
+  background-color: #b7915d;
+}
+
+/*style the arrow inside the select element:*/
+.select-selected:after {
+  position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+
+/*point the arrow upwards when the select box is open (active):*/
+.select-selected.select-arrow-active:after {
+  border-color: transparent transparent #fff transparent;
+  top: 7px;
+}
+
+/*style the items (options), including the selected item:*/
+.select-items div,.select-selected {
+  color: #ffffff;
+  padding: 8px 16px;
+  border: 1px solid transparent;
+  border-color: transparent transparent rgba(0, 0, 0, 0.1) transparent;
+  cursor: pointer;
+  user-select: none;
+}
+
+/*style items (options):*/
+.select-items {
+  position: center;
+  background-color: tan;
+  top: 100%;
+  left: 0;
+  right: 0;
+  z-index: 99;
+}
+
+/*hide the items when the select box is closed:*/
+.select-hide {
+  display: none;
+}
+
+.select-items div:hover, .same-as-selected {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+</style>
+<style>
+        .container {
+            margin-top: 30px;
+            color: tan;
+        }
+  
+        span {
+            color: green;
+        }
+    </style>
